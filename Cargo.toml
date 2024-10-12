@@ -1,3 +1,5 @@
 [workspace]
 members = ["abi", "reservation", "service"]
 resolver = "2"
+
+[workspace.dependencies]
