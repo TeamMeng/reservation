@@ -94,6 +94,8 @@ allow = [
   "Unicode-DFS-2016",
   "BSD-3-Clause",
   "MPL-2.0",
+  "ISC",
+  "OpenSSL",
   #"Apache-2.0 WITH LLVM-exception",
 ]
 # The confidence threshold for detecting a license from license text.
@@ -236,3 +238,8 @@ github = []
 gitlab = []
 # bitbucket.org organizations to allow git sources for
 bitbucket = []
+
+[[licenses.clarify]]
+name = "ring"
+expression = "MIT AND ISC AND OpenSSL"
+license-files = [{ path = "LICENSE", hash = 0xbd0eed23 }]
