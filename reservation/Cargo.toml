@@ -6,7 +6,11 @@ license = "MIT"
 
 [dependencies]
 abi = { version = "0.1.0", path = "../abi" }
+anyhow = { workspace = true }
 async-trait = "0.1.83"
 chrono = { workspace = true }
 sqlx = { workspace = true }
-thiserror = "1.0.64"
+
+[dev-dependencies]
+sqlx-db-tester = "0.5.0"
+tokio = { version = "1.40.0", features = ["rt", "rt-multi-thread", "macros"] }

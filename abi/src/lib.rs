@@ -1,9 +1,8 @@
+mod error;
 mod pb;
+mod types;
+mod utils;
 
-use chrono::{DateTime, Utc};
+pub use error::{Error, ReservationConflictInfo};
 pub use pb::*;
-use prost_types::Timestamp;
-
-pub fn convert_to_utc_time(ts: Timestamp) -> DateTime<Utc> {
-    DateTime::<Utc>::from_timestamp(ts.seconds, ts.nanos as _).unwrap()
-}
+pub use utils::{convert_to_timestamp, convert_to_utc_time};
